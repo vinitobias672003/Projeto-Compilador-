@@ -25,7 +25,7 @@ for c in conteudo:
     elif tem_string:
         e_string += c
 
-print(conteudo)
+# print(conteudo)
 
 acumula_tokem = ""  # é preenchido pelo for 
 c_tokem= "" # é o resultado de bater o acumulado de carecteres, no json que é a tabela de tokens 
@@ -44,7 +44,7 @@ for c in range(len(conteudo)-1,-1,-1):
         c_tokem = reservadas[acumula_tokem]
         # print(c_tokem)
         # confere as exceções mais chatas
-        if c_tokem == "SE"  or c_tokem == "E" or c_tokem == "NAO" or c_tokem == "PARA" or c_tokem != reservadas[acumula_tokem]:
+        if c_tokem == "SE"  or c_tokem == "E" or c_tokem == "NAO" or c_tokem == "PARA" :
             
             #  faz as mudança 
             if conteudo[c-1] == " " or conteudo[c-1] == "\n":
@@ -54,7 +54,7 @@ for c in range(len(conteudo)-1,-1,-1):
                 c_tokem = " "
                 acumula_tokem = ""
             else:   # era para fazer a troca da exceção das exceções, confere !!!
-                conteudo = conteudo[:c] + " " + "id" + conteudo[fim_palavra:]
+                1==1
 
 
 
@@ -64,9 +64,12 @@ for c in range(len(conteudo)-1,-1,-1):
             c_tokem = " "
             acumula_tokem = ""
 
-
-
     except Exception as e:
+        print(conteudo)
+        conteudo = conteudo[:c] + " " + "id" + conteudo[fim_palavra+1:]
+        fim_palavra = c-1
+        c_tokem = " "
+        acumula_tokem = ""
         1==1  #o except precisa ter algo se não dá erro
     
-print(conteudo)
+# print(conteudo)
