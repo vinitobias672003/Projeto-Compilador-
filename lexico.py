@@ -81,3 +81,13 @@ for c in range(len(conteudo)-1,-1,-1):
         1==1
         
 print(conteudo)
+
+# professor essa parte eu desiste e fiz com ia, até eu aprender a cirar um arquivo em py, 
+# era mais útil gastar esse tempo fazendo o sintatico e semantico 
+
+caminho = r"C:\Users\vinih\OneDrive\Área de Trabalho\comp\saida_lexica.obj"
+
+with open(caminho, "w", encoding="utf-8") as f:
+    f.write(conteudo)
+
+print("Arquivo .obj criado!")
