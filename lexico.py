@@ -65,11 +65,19 @@ for c in range(len(conteudo)-1,-1,-1):
             acumula_tokem = ""
 
     except Exception as e:
-        print(conteudo)
-        conteudo = conteudo[:c] + " " + "id" + conteudo[fim_palavra+1:]
-        fim_palavra = c-1
-        c_tokem = " "
-        acumula_tokem = ""
-        1==1  #o except precisa ter algo se não dá erro
-    
-# print(conteudo)
+
+        # verifica se terminou a palavra
+        if c == 0 or conteudo[c-1] == " " or conteudo[c-1] == "\n":
+
+            # evita transformar vazio em id
+            if acumula_tokem.strip() != "":
+
+                conteudo = conteudo[:c] + " id " + conteudo[fim_palavra+1:]
+
+                fim_palavra = c-1
+                c_tokem = " "
+                acumula_tokem = ""
+
+        1==1
+        
+print(conteudo)
