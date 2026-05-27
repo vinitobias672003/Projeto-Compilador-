@@ -84,8 +84,10 @@ conteudo_sintatico = {
 caminho = r"C:\Users\vinih\OneDrive\Área de Trabalho\comp\saida_sintatico.obj"
 
 with open(caminho, "w", encoding="utf-8") as f:
-    f.write(conteudo_sintatico)
+    f.write(json.dumps(conteudo_sintatico, indent=4, ensure_ascii=False))
 
 print("Arquivo .obj criado!")
+
+
 
 
