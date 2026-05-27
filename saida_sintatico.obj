@@ -1,17 +1,1 @@
- TIPO DOISP  id  PVIR
- TIPO DOISP  id  PVIR
- TIPO DOISP  id  PVIR
-
- ESCREVA PARAB  STRING  PARFE PVIR
- id  PARFE PVIR
-
-SEe  id   LOGMAIOR  id   ENTAO
-    PARAa  id   LOGMENOR OPMENOS  id   ATE  id   PASSO  id 
-         id   LOGMENOR OPMENOS  id   OPMULTI  id  PVIR
-         id  PARFE PVIR
-     FIMPARA PVIR
- SENAO
-     ESCREVA PARAB  STRING  PARFE PVIR
- FIMSE PVIR
-
-
+[{'tipo': 'IDENTIFICADOR', 'valor': 'TIPO'}, {'tipo': 'IDENTIFICADOR', 'valor': 'DOISP'}, {'tipo': 'IDENTIFICADOR', 'valor': 'id'}, {'tipo': 'IDENTIFICADOR', 'valor': 'PVIR'}, {'tipo': 'IDENTIFICADOR', 'valor': 'TIPO'}, {'tipo': 'IDENTIFICADOR', 'valor': 'DOISP'}, {'tipo': 'IDENTIFICADOR', 'valor': 'id'}, {'tipo': 'IDENTIFICADOR', 'valor': 'PVIR'}, {'tipo': 'IDENTIFICADOR', 'valor': 'TIPO'}, {'tipo': 'IDENTIFICADOR', 'valor': 'DOISP'}, {'tipo': 'IDENTIFICADOR', 'valor': 'id'}, {'tipo': 'IDENTIFICADOR', 'valor': 'PVIR'}, {'tipo': 'IDENTIFICADOR', 'valor': 'ESCREVA'}, {'tipo': 'IDENTIFICADOR', 'valor': 'PARAB'}, {'tipo': 'IDENTIFICADOR', 'valor': 'STRING'}, {'tipo': 'IDENTIFICADOR', 'valor': 'PARFE'}, {'tipo': 'IDENTIFICADOR', 'valor': 'PVIR'}, {'tipo': 'IDENTIFICADOR', 'valor': 'id'}, {'tipo': 'IDENTIFICADOR', 'valor': 'PARFE'}, {'tipo': 'IDENTIFICADOR', 'valor': 'PVIR'}, {'tipo': 'IDENTIFICADOR', 'valor': 'SEe'}, {'tipo': 'IDENTIFICADOR', 'valor': 'id'}, {'tipo': 'IDENTIFICADOR', 'valor': 'LOGMAIOR'}, {'tipo': 'IDENTIFICADOR', 'valor': 'id'}, {'tipo': 'IDENTIFICADOR', 'valor': 'ENTAO'}, {'tipo': 'IDENTIFICADOR', 'valor': 'PARAa'}, {'tipo': 'IDENTIFICADOR', 'valor': 'id'}, {'tipo': 'IDENTIFICADOR', 'valor': 'LOGMENOR'}, {'tipo': 'IDENTIFICADOR', 'valor': 'OPMENOS'}, {'tipo': 'IDENTIFICADOR', 'valor': 'id'}, {'tipo': 'IDENTIFICADOR', 'valor': 'ATE'}, {'tipo': 'IDENTIFICADOR', 'valor': 'id'}, {'tipo': 'IDENTIFICADOR', 'valor': 'PASSO'}, {'tipo': 'IDENTIFICADOR', 'valor': 'id'}, {'tipo': 'IDENTIFICADOR', 'valor': 'id'}, {'tipo': 'IDENTIFICADOR', 'valor': 'LOGMENOR'}, {'tipo': 'IDENTIFICADOR', 'valor': 'OPMENOS'}, {'tipo': 'IDENTIFICADOR', 'valor': 'id'}, {'tipo': 'IDENTIFICADOR', 'valor': 'OPMULTI'}, {'tipo': 'IDENTIFICADOR', 'valor': 'id'}, {'tipo': 'IDENTIFICADOR', 'valor': 'PVIR'}, {'tipo': 'IDENTIFICADOR', 'valor': 'id'}, {'tipo': 'IDENTIFICADOR', 'valor': 'PARFE'}, {'tipo': 'IDENTIFICADOR', 'valor': 'PVIR'}, {'tipo': 'IDENTIFICADOR', 'valor': 'FIMPARA'}, {'tipo': 'IDENTIFICADOR', 'valor': 'PVIR'}, {'tipo': 'IDENTIFICADOR', 'valor': 'SENAO'}, {'tipo': 'IDENTIFICADOR', 'valor': 'ESCREVA'}, {'tipo': 'IDENTIFICADOR', 'valor': 'PARAB'}, {'tipo': 'IDENTIFICADOR', 'valor': 'STRING'}, {'tipo': 'IDENTIFICADOR', 'valor': 'PARFE'}, {'tipo': 'IDENTIFICADOR', 'valor': 'PVIR'}, {'tipo': 'IDENTIFICADOR', 'valor': 'FIMSE'}, {'tipo': 'IDENTIFICADOR', 'valor': 'PVIR'}]
