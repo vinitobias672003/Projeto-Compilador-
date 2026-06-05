@@ -1,93 +1,89 @@
 import json
 
-with open(".\\saida_lexica.obj", "r", encoding="utf-8") as f:
-    conteudo = f.read()
+with open(".\saida_lexica.obj", "r", encoding="utf-8") as f:conteudo = f.read()
 
-    # print(conteudo)
+tokens_entrada = conteudo.split()
 
-# var para imprimir o resultado e atuar durante o font
 tokens = []
-palavra = ""
 
-# ajuda para manter possivel a lógica
-operadores = "+-*/="
-delimitadores = "(){};,"
+operadores = [
+"OPMAIS",
+"OPMENOS",
+"OPMULTI",
+"OPDIV",
+"LOGMAIOR",
+"LOGMENOR",
+"LOGIGUAL",
+"LOGDIF",
+"ATRIB"
+]
 
-# afd's que irão atuar para gerar o a analise sintática
-for caractere in conteudo:
+delimitadores = [
+"PARAB",
+"PARFE",
+"PVIR",
+"DOISP",
+"VIRG"
+]
 
-    # afd de numeros e simbolos 
-    if caractere.isalnum() or caractere == "_":
-        palavra += caractere
+reservadas = [
+"TIPO",
+"ESCREVA",
+"STRING",
+"SEe",
+"ENTAO",
+"SENAO",
+"FIMSE",
+"PARAa",
+"ATE",
+"PASSO",
+"FIMPARA"
+]
 
-    else:
+for token in tokens_entrada:
 
-        # salva oq acaboud de definir/identificar
-        if palavra != "":
 
-            if palavra.isdigit():
-                tokens.append({
-                    "tipo": "NUMERO",
-                    "valor": palavra
-                })
-
-            else:
-                tokens.append({
-                    "tipo": "IDENTIFICADOR",
-                    "valor": palavra
-                })
-
-            palavra = ""
-
-        # mesma apkicação para operadores 
-        if caractere in operadores:
-            tokens.append({
-                "tipo": "OPERADOR",
-                "valor": caractere
-            })
-
-        # # mesma apkicação para delimitadores
-        elif caractere in delimitadores:
-            tokens.append({
-                "tipo": "DELIMITADOR",
-                "valor": caractere
-            })
-
-# se terminace em palavra teria de ter outra 
-if palavra != "":
-
-    if palavra.isdigit():
+    if token.isdigit():
         tokens.append({
             "tipo": "NUMERO",
-            "valor": palavra
+            "valor": token
+        })
+        
+    elif token in operadores:
+
+        tokens.append({
+            "tipo": "OPERADOR",
+            "valor": token
+        })
+
+    elif token in delimitadores:
+
+        tokens.append({
+            "tipo": "DELIMITADOR",
+            "valor": token
+        })
+
+    elif token in reservadas:
+
+        tokens.append({
+            "tipo": "RESERVADA",
+            "valor": token
         })
 
     else:
+
         tokens.append({
             "tipo": "IDENTIFICADOR",
-            "valor": palavra
+            "valor": token
         })
 
-# fiz oq o senhor falou, tratei tudo em uma string zona reta
-print(tokens)
-# mesmo conceito do sintatico, juntar tudo em uma varia para facilitar a impresão 
 conteudo_sintatico = {
-    "tokens": tokens,
-    "quantidade_tokens": len(tokens)
+"tokens": tokens,
+"quantidade_tokens": len(tokens)
 }
 
-#  usei a ia para deixar mais facil de ler e ver se deu certo ou não
-# print(json.dumps(conteudo_sintatico, indent=4, ensure_ascii=False))
-
-# comecei a fazer no dia 25/05, facilitou muito a revisão para eu entender essa parte 
-
 caminho = r"C:\Users\vinih\OneDrive\Área de Trabalho\comp\saida_sintatico.obj"
-
 with open(caminho, "w", encoding="utf-8") as f:
     f.write(json.dumps(conteudo_sintatico, indent=4, ensure_ascii=False))
 
-print("Arquivo .obj criado!")
-
-
-
-
+print(conteudo_sintatico)
